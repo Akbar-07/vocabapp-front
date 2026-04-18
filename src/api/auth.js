@@ -1,0 +1,10 @@
+import client from './client';
+export const register = d => client.post('/auth/register/', d);
+export const verifyEmail = d => client.post('/auth/verify-email/', d);
+export const login = d => client.post('/auth/login/', d);
+export const forgotPassword = d => client.post('/auth/forgot-password/', d);
+export const resetPassword = d => client.post('/auth/reset-password/', d);
+export const getMe = () => client.get('/auth/me/');
+export const getAdminUsers = () => client.get('/auth/admin/users/');
+export const toggleStaff = id => client.post(`/auth/admin/users/${id}/toggle-staff/`);
+export const deleteUser = id => client.delete(`/auth/admin/users/${id}/delete/`);

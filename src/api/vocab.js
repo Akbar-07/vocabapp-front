@@ -1,0 +1,15 @@
+import client from './client';
+export const getRooms = () => client.get('/vocab/rooms/');
+export const createRoom = d => client.post('/vocab/rooms/create/', d);
+export const getRoom = id => client.get(`/vocab/rooms/${id}/`);
+export const updateRoom = (id, d) => client.put(`/vocab/rooms/${id}/update/`, d);
+export const deleteRoom = id => client.delete(`/vocab/rooms/${id}/delete/`);
+export const addWord = (roomId, d) => client.post(`/vocab/rooms/${roomId}/words/add/`, d);
+export const updateWord = (roomId, wId, d) => client.put(`/vocab/rooms/${roomId}/words/${wId}/update/`, d);
+export const deleteWord = (roomId, wId) => client.delete(`/vocab/rooms/${roomId}/words/${wId}/delete/`);
+export const toggleDifficult = (roomId, wId) => client.post(`/vocab/rooms/${roomId}/words/${wId}/toggle-difficult/`);
+export const clearDifficult = roomId => client.post(`/vocab/rooms/${roomId}/clear-difficult/`);
+export const syncGrammar = () => client.post('/vocab/grammar/sync/');
+export const createShareCode = roomIds => client.post('/vocab/share/create/', { room_ids: roomIds });
+export const useShareCode = code => client.post('/vocab/share/use/', { code });
+export const getAdminStats = () => client.get('/vocab/admin/stats/');
