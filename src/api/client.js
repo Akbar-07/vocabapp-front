@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://vocabapp1.pythonanywhere.com/api';
 const client = axios.create({ baseURL: API_URL });
 client.interceptors.request.use(cfg => {
   const token = localStorage.getItem('access');
