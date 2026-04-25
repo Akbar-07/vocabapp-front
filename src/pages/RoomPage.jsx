@@ -139,11 +139,11 @@ export default function RoomPage() {
                     {w.definition && <div className="word-def">{w.definition}</div>}
                   </div>
                   <div className="word-actions">
-                    {/* <button className="btn btn-sm btn-icon" style={{background:'rgba(67,97,238,0.1)',color:'var(--primary)'}}
+                    <button className="btn btn-sm btn-icon" style={{background:'rgba(67,97,238,0.1)',color:'var(--primary)'}}
                       onClick={() => speak(w.en)} title="Pronounce"><i className="bx bx-volume-full"></i></button>
                     <button className="btn btn-sm btn-icon" title="Mark difficult"
                       style={{background:w.difficult?'var(--warning)':'rgba(0,0,0,0.05)',color:w.difficult?'white':'var(--gray)'}}
-                      onClick={() => toggleDiff(w.id)}><i className="bx bx-star"></i></button> */}
+                      onClick={() => toggleDiff(w.id)}><i className="bx bx-star"></i></button>
                     <button className="btn btn-sm btn-icon btn-success" title="Edit"
                       onClick={() => { setEditWord(w); setEditForm({...w,synonyms:w.synonyms?.join(', ')||'',antonyms:w.antonyms?.join(', ')||''}); }}>
                       <i className="bx bx-edit"></i>

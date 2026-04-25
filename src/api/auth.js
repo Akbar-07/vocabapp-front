@@ -8,3 +8,8 @@ export const getMe = () => client.get('/auth/me/');
 export const getAdminUsers = () => client.get('/auth/admin/users/');
 export const toggleStaff = id => client.post(`/auth/admin/users/${id}/toggle-staff/`);
 export const deleteUser = id => client.delete(`/auth/admin/users/${id}/delete/`);
+export const updateProfile = d => client.patch('/auth/profile/update/', d);
+export const changePassword = d => client.post('/auth/change-password/', d);
+export const requestEmailChange = d => client.post('/auth/change-email/request/', d);
+export const confirmEmailChange = d => client.post('/auth/change-email/confirm/', d);
+export const resendVerification = () => client.post('/auth/resend-verification/');
