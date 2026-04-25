@@ -28,8 +28,8 @@ export default function Login() {
         </div>
         <form onSubmit={submit}>
           <div className="form-group">
-            <label>Email</label>
-            <input className="form-input" type="email" placeholder="email@example.com"
+            <label>Email or Username</label>
+            <input className="form-input" type="text" placeholder="email@example.com or username"
               value={form.email} onChange={e=>setForm({...form,email:e.target.value})} required />
           </div>
           <div className="form-group">
